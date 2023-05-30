@@ -12,20 +12,25 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
    
 const navigation = [
-  { name: 'Home', href: '#', current: false },
-  { name: 'All Products', href: '#', current: false },
+  { name: 'Home', href: '/', current: false },
+  { name: 'All Products', href: '/#', current: false },
   { name: '3D printers', href: '#', current: false },
   { name: 'Filaments', href: '#', current: false },
   { name: 'Resin', href: '#', current: false },
-  { name: 'Part &Upgrades', href: '#', current: false },
+  { name: 'Part&Upgrades', href: '#', current: false },
   { name: 'Offers', href: '#', current: false },
-  { name: 'Used Machines', href: '#', current: false },
+  { name: 'Used_Machines', href: '#', current: false },
   { name: 'Blogs', href: '#', current: false },
   { name: 'FAQs', href: '#', current: false },
 ]
 const navigationPhone = [
   { name: 'Call us +967 738 074 693', href: '#', current: false },
   { name: 'info@3Dyemen.com', href: '#', current: false },
+ 
+  
+]
+const navigationPhoneFollowus = [
+  
   { name: 'Facebook', href: '#', current: false },
   { name: 'Instagram', href: '#', current: false },
   { name: 'WhatsApp', href: '#', current: false },
@@ -90,7 +95,7 @@ function Header() {
     {/* <!-- cart count --> */}
     <div class="ml-4 hidden sm:flex flex-col font-bold">
       <span class="text-xs text-gray-400">Your Cart</span>
-      <span>2 items</span>
+      <span>3 items</span>
     </div>
   </div>
 
@@ -145,8 +150,8 @@ function Header() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          item.current ? 'bg-gray-900 text-white' : 'text-black-900 hover:bg-gray-700 hover:text-white',
+                          'rounded-md px-1  font-meduim text-xl'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -204,7 +209,7 @@ function Header() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100 text-red-600' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Sign out
                           </a>
@@ -225,7 +230,7 @@ function Header() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'bg-black-900 text-white' : 'text-black-300 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
@@ -234,13 +239,15 @@ function Header() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+              <hr className="bg-red-900"></hr>
+ <div><h1 className="text-black-900">NEED HELP?</h1></div>
                  {navigationPhone.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'bg-red-900 text-white' : 'text-black-300 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
@@ -249,6 +256,24 @@ function Header() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+<hr  ></hr>
+ <div><h1 className="text-black-900">FOLLOW US</h1></div>
+{navigationPhoneFollowus.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current ? 'bg-red-900 text-white' : 'text-black-300 hover:bg-gray-700 hover:text-white',
+                    'block rounded-md px-3 py-2 text-base font-medium'
+                  )}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                 
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+
             </div>
           </Disclosure.Panel>
         </>
