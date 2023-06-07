@@ -4,6 +4,7 @@ import Button from './Button';
 import data from './Ender.json';
 
 const Carousel = () => {
+  
   const maxScrollWidth = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
@@ -49,6 +50,7 @@ const Carousel = () => {
       : 0;
   }, []);
   
+  
  
 
   return (
@@ -61,7 +63,7 @@ const Carousel = () => {
         
     <div className="carousel   ">
        
-      <div className="relative overflow-hidden">
+      <div className="relative ">
         <div className="flex justify-between absolute top left w-full h-full">
           <button
             onClick={movePrev}
@@ -106,9 +108,9 @@ const Carousel = () => {
             <span className="sr-only">Next</span>
           </button>
         </div>
-        <div
+        <div 
           ref={carousel}
-          className="carousel-container relative flex gap-0 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
+          className="carousel-container swipeable  relative flex gap-0 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0 overflow-hidden overflow-x-scroll scroll-behavior-smooth"
         >
           {data.resources.map((resource, index) => {
             return (
