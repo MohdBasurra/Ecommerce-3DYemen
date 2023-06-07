@@ -65,7 +65,7 @@ const Carousel = () => {
         <div className="flex justify-between absolute top left w-full h-full">
           <button
             onClick={movePrev}
-            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 bg-custom-blue hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
             disabled={isDisabled('prev')}
           >
             <svg
@@ -86,7 +86,7 @@ const Carousel = () => {
           </button>
           <button
             onClick={moveNext}
-            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            className="hover:bg-blue-900/75 text-white w-10 h-full bg-custom-blue text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
             disabled={isDisabled('next')}
           >
             <svg
@@ -115,7 +115,7 @@ const Carousel = () => {
             
              <div key={index} class="card w-full max-w-sm bg-white     border-l border-black   border-1   ">
                 <a href="#">
-                <img class="rounded-t-lg" src={resource.imageUrl || ''}  />
+                <img className="rounded-t-lg" src={resource.imageUrl || ''}  />
             </a>
             <div class="px-5 pb-5">
                 <a href="#">
@@ -130,7 +130,7 @@ const Carousel = () => {
                     <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
                 </div>
                 <div class="flex items-center justify-between">
-                    <span class="text-3xl font-bold text-gray-900 dark:text-white">$400</span>
+                    <span class="text-3xl font-bold text-gray-900 dark:text-white"> {(index*44+399)}$</span>
                  </div>
             </div>
         </div>

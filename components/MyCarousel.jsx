@@ -42,13 +42,7 @@ Image1,Image2,Image3,Image4
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-  {/* <div className="flex w-full h-1/2">              <Image
-                src={image}
-                alt={`Slide ${index + 1}`}
-                layout="fill"
-                objectFit="cover"  
-              />
-            </div>           */}
+ 
 <div className="  h-1/2     ">
 <div className='  flex flex-col justify-center   items-center w-full h-1/4 bg-blue-400'>
                  <Image
