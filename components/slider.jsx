@@ -64,10 +64,10 @@ const Carousel = () => {
     <div className="carousel   ">
        
       <div className="relative ">
-        <div className="flex justify-between absolute top left w-full h-full">
+        <div className="flex justify-between absolute top left w-full h-full items-center">
           <button
             onClick={movePrev}
-            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 bg-custom-blue hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            className="hover:bg-blue-900/75 text-white w-10 h-1/4 text-center opacity-75 bg-custom-blue hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
             disabled={isDisabled('prev')}
           >
             <svg
@@ -88,7 +88,7 @@ const Carousel = () => {
           </button>
           <button
             onClick={moveNext}
-            className="hover:bg-blue-900/75 text-white w-10 h-full bg-custom-blue text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            className="hover:bg-blue-900/75 text-white w-10 h-1/4    bg-custom-blue text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-100"
             disabled={isDisabled('next')}
           >
             <svg
@@ -108,14 +108,14 @@ const Carousel = () => {
             <span className="sr-only">Next</span>
           </button>
         </div>
-        <div 
+        <div
           ref={carousel}
-          className="carousel-container swipeable  relative flex gap-0 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0 overflow-hidden overflow-x-scroll scroll-behavior-smooth"
+          className= " carousel-container relative flex gap-0 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0 hide-scrollbar swipeable overflow-x-scroll"
         >
           {data.resources.map((resource, index) => {
             return (
             
-             <div key={index} class="card w-full max-w-sm bg-white     border-l border-black   border-1   ">
+             <div  key={index} class=" card w-full max-w-sm bg-white carousel-item   border-l border-black   border-1   ">
                 <a href="#">
                 <img className="rounded-t-lg" src={resource.imageUrl || ''}  />
             </a>

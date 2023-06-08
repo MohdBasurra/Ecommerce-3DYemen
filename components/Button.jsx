@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = ({ color, text, textColor, size }) => {
+const Button = ({ color, text, textColor, size }) => { 
   let buttonClasses = `bg-${color} hover:bg-${color}-700 text-${textColor} font-bold py-2 px-4 border-b-4 border-${color}-700 hover:border-${color}-500 rounded`;
 
   if (size === 'small') {
