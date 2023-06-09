@@ -41,18 +41,18 @@ function Header() {
   return (<>
 
 <div class="bg-white pt-4">
-  <div class="container mx-auto  -  flex items-center bg-red-4">
+  <div class="container mx-auto flex  items-star justify-start md:justify-between ">
 
     {/* <!-- logo --> */}
-    <div class="  md:w-48  ">
+    <div class="  md:w-48 ">
     <Image src={crealityLogo} alt="Creality Logo" width={280} height={250} />    </div>
 
     {/* <!-- search --> */}
-    <div class="w-full max-w-xs xl:max-w-lg 2xl:max-w-2xl bg-gray-100 rounded-md hidden xl:flex items-center">
-      <select class="bg-transparent uppercase font-bold text-sm p-4 mr-4" name="" id="">
+    <div  class=" flex flex-wrap   bg-blue-600  rounded-md md:hidden xl:flex items-center justify-center">
+      <select class="bg-transparent uppercase font-bold text-sm p-4 mr-4 " name="" id="">
         <option>All categories</option> 
         <option>Filament</option>
-        <option>Resin</option>
+        <option >Resin</option>
         <option>3D printers</option>
         <option>Spare parts</option>
       </select>
@@ -62,13 +62,13 @@ function Header() {
     </div>
 
     {/* <!-- phone number --> */}
-    <div class="ml-auto md:w-48 hidden sm:flex flex-col place-items-end">
+    <div class="ml-auto md:w-48 hidden sm:flex flex-col place-items-end ">
       <span class="font-bold md:text-xl">738 074 693</span>
       <span class="font-semibold text-sm text-gray-400">Support 24/7</span>
     </div>
 
     {/* <!-- buttons --> */}
-    <nav class="contents">
+    <nav class="contents bg-gray-500">
       <ul class="ml-4 xl:w-48 flex items-center justify-end">
         <li class="ml-2 lg:ml-4 relative inline-block">
           <a class="" href="">
@@ -138,7 +138,7 @@ function Header() {
                    
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex flex-wrap space-x-4">
                     
 
 
