@@ -44,14 +44,14 @@ function Header() {
   <div class="container   mx-auto flex items-center justify-between ">
 
     {/* <!-- logo --> */}
-    <div class="  md:w-48  pr-2 ">
+    <div class="  md:w-48   ">
     <Image src={crealityLogo} alt="Creality Logo" width={280} height={250} />    </div>
  
     {/* <!-- search --> */}
     <div className='flex justify-end items-end   mx-auto bg-gray-100'>
     <div  class="  rounded-md   xl:flex items-center justify-center hidden md:block  ">
       
-      <input class="  bg-transparent font-semibold text-xl pl-4" type="text" placeholder="I'm searching for ..."/>
+      <input class="  bg-transparent font-semibold text-xl " type="text" placeholder="I'm searching for ..."/>
       {/* Seacrch Icon */}
        <svg class="ml-auto h-5 px-4 text-gray-500" aria-hidden="true" focusable="false" data-prefix="far" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"   > <path fill="currentColor" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg> 
     </div></div>
@@ -149,7 +149,7 @@ function Header() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="absolute inset-y-0 right-0 flex items-center  sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                  
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">

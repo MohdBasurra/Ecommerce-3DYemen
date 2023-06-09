@@ -17,11 +17,11 @@ export default function Home() {
 
   return (
   <>
-  <div className=' w-screen justify-center items-center'>
+  <div className=''>
   <Header/>
-  <div className=' justify-center items-center'>
+  <div className=' justify-center items-center  '>
 
-  <div className='pt-8 justify-center items-center'><MyCarousel/></div>
+  <div className=' pt-8 justify-center items-center flex'><MyCarousel/></div>
 
   <div><Introduction/>  </div>
 

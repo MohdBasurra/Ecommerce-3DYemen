@@ -44,7 +44,7 @@ Image1,Image2,Image3,Image4
           <SwiperSlide key={index}>
  
 <div className="  h-1/2     ">
-<div className='  flex flex-col justify-center   items-center w-full h-1/4 bg-blue-400'>
+<div className='  flex flex-col justify-center   items-center w-full h-1/4 bg-red-400'>
                  <Image
                 src={image}
                 alt={`Slide ${index + 1}`}
