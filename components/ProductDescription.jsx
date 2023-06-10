@@ -19,7 +19,7 @@ const ProductDescription = () => {
         
       
         <div className="button sm:w-4/4 w-3/4 sm:p-2 p-2 " ><Button text={'Add to Cart'} color={'custom-blue'} size={'large'}/></div>
-        <div className="button w-1/5 sm:p-2 p-2 " ><Button icon={faHeart.iconName} color={'custom-blue'} size={'large'}/></div>
+        <div className="button w-1/5 sm:p-2 p-2 " ><Button icon={faHeart} color={'custom-blue'} size={'large'}/></div>
    
     </div>
 
