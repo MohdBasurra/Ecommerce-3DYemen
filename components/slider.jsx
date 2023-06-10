@@ -116,11 +116,11 @@ const Carousel = () => {
             return (
             
              <div  key={index} class=" card w-full max-w-sm bg-white carousel-item   border-l border-black   border-1   ">
-                <a href="#">
+                <a href="product/0">
                 <img className="rounded-t-lg" src={resource.imageUrl || ''}  />
             </a>
             <div class="px-5 pb-5">
-                <a href="#">
+                <a href="product/0">
                     <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{resource.title}</h5>
                 </a>
                 <div class="flex items-center mt-2.5 mb-5">
