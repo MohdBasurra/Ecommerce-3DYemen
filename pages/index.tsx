@@ -7,7 +7,9 @@ import React, { useState } from "react";
 import ImageCarousel from '../components/slider';
 import Banner from '../components/Banner';
 import BannerCreality from "../images/bannerCrality.jpg"
-import BannerEsun from '../images/BannerEsun.png'
+import BannerEsun from '../images/BannerEsun.png';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@fortawesome/fontawesome-free/js/all.min.js';
 
 const inter = Inter({ subsets: ['latin'] })
 
