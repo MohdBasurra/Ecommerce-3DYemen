@@ -3,8 +3,8 @@ import Button from "./Button";
 // Data
 import data from "./Ender.json";
 
-const Carousel = ({descrption=true}) => {
-   const maxScrollWidth = useRef(0);
+const Carousel = ({ descrption = true }) => {
+  const maxScrollWidth = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
 
@@ -52,17 +52,21 @@ const Carousel = ({descrption=true}) => {
   return (
     <div className="w-screen    flex  justify-center items-center     ">
       <div className="parent sm:w-1/2 w-full flex flex-col sm:flex-row rounded border-custom-blue border-solid border-8 ">
-      { 1 &&descrption?( <div className="child1 bg-custom-blue w-full sm:w-1/3 sm:text-2xl  text-2xl justify-start items-center text-white font-bold p-2 ">
-          <h1>Creality Ender Series 3D Printer</h1>
-          <div className="child2 pt-8  sm:w-1/6 text-sm  ">
-            <Button
-              textColor={"gray-900"}
-              color={"white"}
-              text={"see more"}
-              size={"medium"}
-            />
+        {1 && descrption ? (
+          <div className="child1 bg-custom-blue w-full sm:w-1/3 sm:text-2xl  text-2xl justify-start items-center text-white font-bold p-2 ">
+            <h1>Creality Ender Series 3D Printer</h1>
+            <div className="child2 pt-8  sm:w-1/6 text-sm  ">
+              <Button
+                textColor={"gray-900"}
+                color={"white"}
+                text={"see more"}
+                size={"medium"}
+              />
+            </div>
           </div>
-        </div>):(<></>)}
+        ) : (
+          <></>
+        )}
         <div className="  sm:w-2/3 ">
           <div className="carousel   ">
             <div className="relative ">

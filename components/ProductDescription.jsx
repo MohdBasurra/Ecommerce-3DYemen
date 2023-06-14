@@ -51,7 +51,6 @@ const ProductDescription = () => {
 
             <div className="flex sm:flex-row flex-col w-full pt-8 ">
               <div className="block sm:w-1/2 w-full  ">
-              
                 <p>
                   <span className="font-bold">print Size :</span> 22 *44*44 mm
                 </p>
@@ -82,15 +81,10 @@ const ProductDescription = () => {
                   <span className="font-bold">print Size :</span> 220 *255*400
                   mm
                 </p>
-                
               </div>
             </div>
-        
-
           </div>
         </div>
-     
-     
       </div>
     </>
   );
