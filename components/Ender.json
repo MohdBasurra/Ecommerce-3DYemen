@@ -1,99 +1,79 @@
 {
-    "resources": [
-       
-  
-      {
-        "title": "Ender 3 V2",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
-      }
-      ,
-   
-  
-      {
-        "title": "Ender 3 Pro",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/41AyZR+YfLL._SX342_SY445_.jpg"
-      },
-   
-  
-      {
-        "title": "Ender 3 V2",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
-      }
-      ,
-   
-  
-      {
-        "title": "Ender 3 Pro",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/41AyZR+YfLL._SX342_SY445_.jpg"
-      },
-   
-  
-      {
-        "title": "Ender 3 V2",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
-      }
-      ,
-   
-  
-      {
-        "title": "Ender 3 Pro",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/41AyZR+YfLL._SX342_SY445_.jpg"
-      },
-   
-  
-      {
-        "title": "Ender 3 V2",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
-      }
-      ,
-   
-  
-      {
-        "title": "Ender 3 Pro",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/41AyZR+YfLL._SX342_SY445_.jpg"
-      },
-   
-      {
-        "title": "Ender 3 V2",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
-      }
-      ,
-   
-  
-      {
-        "title": "Ender 3 Pro",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/41AyZR+YfLL._SX342_SY445_.jpg"
-      },
-   
-  
-      {
-        "title": "Ender 3 V2",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
-      }, {
-        "title": "Ender 3 V2",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
-      }, {
-        "title": "Ender 3 V2",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
-      }, {
-        "title": "Ender 3 V2",
-        "link": "https://indieweb.social/@kendalmintcode",
-        "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
-      }
-      
-       
-    ]
-  }
+  "resources": [
+    {
+      "title": "Ender 3 V2",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
+    },
+    {
+      "title": "Ender 3 Pro",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/41AyZR+YfLL._SX342_SY445_.jpg"
+    },
+
+    {
+      "title": "Ender 3 V2",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
+    },
+    {
+      "title": "Ender 3 Pro",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/41AyZR+YfLL._SX342_SY445_.jpg"
+    },
+
+    {
+      "title": "Ender 3 V2",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
+    },
+    {
+      "title": "Ender 3 Pro",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/41AyZR+YfLL._SX342_SY445_.jpg"
+    },
+
+    {
+      "title": "Ender 3 V2",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
+    },
+    {
+      "title": "Ender 3 Pro",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/41AyZR+YfLL._SX342_SY445_.jpg"
+    },
+
+    {
+      "title": "Ender 3 V2",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
+    },
+    {
+      "title": "Ender 3 Pro",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/41AyZR+YfLL._SX342_SY445_.jpg"
+    },
+
+    {
+      "title": "Ender 3 V2",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
+    },
+    {
+      "title": "Ender 3 V2",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
+    },
+    {
+      "title": "Ender 3 V2",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
+    },
+    {
+      "title": "Ender 3 V2",
+      "link": "https://indieweb.social/@kendalmintcode",
+      "imageUrl": "https://m.media-amazon.com/images/I/413Qxx3iX4L._SY445_SX342_QL70_ML2_.jpg"
+    }
+  ]
+}
