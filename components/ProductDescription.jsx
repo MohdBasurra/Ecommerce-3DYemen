@@ -37,26 +37,26 @@ const ProductDescription = () => {
                   <span className="font-bold">print Size :</span> 22 *44*44 mm
                 </p>
                 <p className="block">
-                  <span className="font-bold">print Size :</span> 220 *255*400
+                  <span className="font-bold">package size:</span> 700 *779*677
                   mm
                 </p>
                 <p className="block">
-                  <span className="font-bold">print Size :</span> 220 *255*400
+                  <span className="font-bold">max bed Heat :</span> 300c
                   mm
                 </p>
                 <p className="block">
-                  <span className="font-bold">print Size :</span> 220 *255*400
+                  <span className="font-bold">max spedd :</span> 500 mm/s
                   mm
                 </p>
               </div>
               <div className="block sm:w-1/2 w-full  ">
                 <p className="block">
-                  <span className="font-bold">print Size :</span> 220 *255*400
+                  <span className="font-bold">heat sink Size :</span> metal
                   mm
                 </p>
                 <p className="block">
                   {" "}
-                  <span className="font-bold">print Size :</span> 220 *255*400
+                  <span className="font-bold">extruder feeder :</span> direct
                   mm
                 </p>
                 <p className="block">
