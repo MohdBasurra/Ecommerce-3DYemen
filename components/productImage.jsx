@@ -2,7 +2,9 @@ import { useState } from "react";
 import Image from "next/image";
 
 const ProductImage = () => {
-  const [selectedImage, setSelectedImage] = useState("");
+  const [selectedImage, setSelectedImage] = useState(
+    "https://m.media-amazon.com/images/I/41AyZR+YfLL._SX342_SY445_.jpg"
+  );
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
