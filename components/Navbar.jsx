@@ -7,15 +7,15 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
-  { name: "All Products", href: "/#", current: false },
-  { name: "3D printers", href: "#", current: false },
-  { name: "Filaments", href: "#", current: false },
-  { name: "Resin", href: "#", current: false },
-  { name: "Part&Upgrades", href: "#", current: false },
-  { name: "Offers", href: "#", current: false },
+  { name: "All Products", href: "/collection/all", current: false },
+  { name: "3D printers", href: "/collection/all", current: false },
+  { name: "Filaments", href: "/collection/all", current: false },
+  { name: "Resin", href: "/collection/all", current: false },
+  { name: "Part&Upgrades", href: "/collection/all", current: false },
+  { name: "Offers", href: "/collection/all", current: false },
   { name: "Used_Machines", href: "#", current: false },
-  { name: "Blogs", href: "#", current: false },
-  { name: "FAQs", href: "#", current: false },
+  { name: "Blogs", href: "/collection/all", current: false },
+  { name: "FAQs", href: "/collection/all", current: false },
 ];
 const navigationPhone = [
   { name: "Call us +967 738 074 693", href: "#", current: false },

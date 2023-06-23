@@ -19,7 +19,7 @@ const Collection = () => {
                       class=" card  m-2 bg-lightBlue "
                     >
                         <div className="image m-4">
-                      <a href="product/0">
+                      <a href='../product/0'>
                         <img
                           className="rounded-t-lg"
                           src={resource.imageUrl || ""}

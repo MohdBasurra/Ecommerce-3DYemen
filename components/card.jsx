@@ -7,7 +7,7 @@ const productCard = ({ ImageURl, title }) => {
       <div className="  py-9 grid place-items-center  ">
         <div className="bg-lightBlue  sm:h-[360px] sm:w-64 w-[152px] h-[270px] rounded-md relative ">
           <div className=" card flex justify-center items-center leading-none  ">
-            <Link href={`/product/1`}>
+            <Link href={`../../product/1`}>
               <img
                 alt="df"
                 src={ImageURl}
