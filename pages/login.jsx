@@ -16,7 +16,7 @@ const Login = () => {
                 alt="Example Image"
                 width={400}
                 height={400}
-              />{" "}
+              /> 
               <h1 className="p-8 text-2xl font-semibold">welecome Back!</h1>
             </div>
           </div>
@@ -63,11 +63,11 @@ const Login = () => {
                       </div>
                       <div class="flex items-center justify-between">
                         <div class="flex items-start"></div>
-                        <Link href="/">
-                          <a className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">
+                        <Link href="/" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">
+                           
                             Forgot password?
-                          </a>
-                        </Link>{" "}
+                           
+                        </Link> 
                       </div>
                       <button
                         type="submit"
@@ -76,11 +76,11 @@ const Login = () => {
                         Sign in
                       </button>
                       <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                        Don’t have an account yet?{" "}
-                        <Link href="/signup">
-                          <a class="font-medium text-primary-600 hover:underline dark:text-primary-500">
+                        Don’t have an account yet? 
+                        <Link href="/signup" class="font-medium text-primary-600 hover:underline dark:text-primary-500">
+                           
                             Sign up
-                          </a>
+                           
                         </Link>
                       </p>
                     </form>

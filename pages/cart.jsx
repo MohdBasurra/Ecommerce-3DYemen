@@ -1,11 +1,13 @@
 
 import CartItem from "../components/cartItem";
 import React, { useState } from 'react';
-const cart = () => {
+const Cart = () => {
     const [showCopon, setShowCopon] = useState(false);
+
     function handleCheckboxChange(event) {
         setShowCopon(event.target.checked);
       }
+
   return (
     <>
       <>
