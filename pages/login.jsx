@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import LoginVector from '@/images/LoginVector.png'
+import LoginVector from '@/images/LoginVector.png';
+import Link from 'next/link';
 const Login = () => {
     return ( <>
     <div className="main bg-slate-300 w-screen h-screen flex items-center justify-center">
@@ -39,11 +40,12 @@ const Login = () => {
                           
                           
                       </div>
-                      <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
-                  </div>
+                      <Link href="/">
+        <a className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
+      </Link>                  </div>
                   <button type="submit" class="w-full text-black bg-custom-blue hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
                   <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Don’t have an account yet? <a href="/signup" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                      Don’t have an account yet? <Link href="/signup"><a class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a></Link>
                   </p>
               </form>
           </div>
