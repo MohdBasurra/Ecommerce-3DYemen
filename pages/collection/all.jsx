@@ -1,10 +1,8 @@
 import data from "@/components/Ender.json";
 import Filttering from "@/components/Filltering";
-import Header from "../../components/Navbar";
-const Collection = () => {
+ const Collection = () => {
     return ( <>
-    <Header/>
-    <div className="parent flex w-full ">
+     <div className="parent flex w-full ">
         
        <div className="w-1/4"> <Filttering/></div>
             <div className="child1 filletring ">
@@ -64,7 +62,7 @@ const Collection = () => {
                           </svg>
                           <svg
                             aria-hidden="true"
-                            class="w-5 h-5 text-yellow-300"
+                            class="w-5 h-5 text-yellow-300 border-sky-900"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -104,3 +102,4 @@ const Collection = () => {
 }
  
 export default Collection;
+//0eWrzgwmjrIKKyYr MongoDb password

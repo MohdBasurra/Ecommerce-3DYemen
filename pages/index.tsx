@@ -10,14 +10,15 @@ import BannerCreality from "../images/bannerCrality.jpg";
 import BannerEsun from "../images/BannerEsun.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/js/all.min.js";
-
+ 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <>
-      <div className="">
-        <Header />
+ 
+    
+     <div className="">
+       
         <div className=" justify-center items-center  ">
           <div className=" pt-8 justify-center items-center flex">
             <MyCarousel />
@@ -57,6 +58,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
-  );
+    
+   );
 }
