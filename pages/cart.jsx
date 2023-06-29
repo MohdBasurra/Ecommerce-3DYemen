@@ -138,4 +138,4 @@ const Cart = () => {
   );
 };
 
-export default cart;
+export default Cart;
