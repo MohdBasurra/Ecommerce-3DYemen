@@ -1,11 +1,11 @@
 import ProductDescription from "../../components/ProductDescription";
 import ProductImage from "../../components/productImage";
- import RelatedProducts from "../../components/RelatedProducts";
+import RelatedProducts from "../../components/RelatedProducts";
 
 const Product = () => {
   return (
     <div>
-       <div className="w-full h-full  ">
+      <div className="w-full h-full  ">
         <div className="parent flex flex-col sm:flex-row w-full order">
           <div className=" border-t sm:border-r sm:border-t-0 border-gray-500   w-full sm:w-1/2 order-1 sm:order-1">
             <ProductImage />

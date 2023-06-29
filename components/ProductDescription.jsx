@@ -41,23 +41,19 @@ const ProductDescription = () => {
                   mm
                 </p>
                 <p className="block">
-                  <span className="font-bold">max bed Heat :</span> 300c
-                  mm
+                  <span className="font-bold">max bed Heat :</span> 300c mm
                 </p>
                 <p className="block">
-                  <span className="font-bold">max spedd :</span> 500 mm/s
-                  mm
+                  <span className="font-bold">max spedd :</span> 500 mm/s mm
                 </p>
               </div>
               <div className="block sm:w-1/2 w-full  ">
                 <p className="block">
-                  <span className="font-bold">heat sink Size :</span> metal
-                  mm
+                  <span className="font-bold">heat sink Size :</span> metal mm
                 </p>
                 <p className="block">
                   {" "}
-                  <span className="font-bold">extruder feeder :</span> direct
-                  mm
+                  <span className="font-bold">extruder feeder :</span> direct mm
                 </p>
                 <p className="block">
                   <span className="font-bold">print Size :</span> 220 *255*400
@@ -68,26 +64,25 @@ const ProductDescription = () => {
           </div>
 
           <div className="buttonsClass  ">
-          <div className=" parent   price flex   flex- sm:flex-row justify-center sm:justify-start text-start  items-center   w-full">
-            <div className="button sm:w-1/2 w-3/4 sm:p-2 p-2 ">
-              <Button
-                text={"Add to Cart"}
-                color={"custom-blue"}
-                size={"large"}
-              />
+            <div className=" parent   price flex   flex- sm:flex-row justify-center sm:justify-start text-start  items-center   w-full">
+              <div className="button sm:w-1/2 w-3/4 sm:p-2 p-2 ">
+                <Button
+                  text={"Add to Cart"}
+                  color={"custom-blue"}
+                  size={"large"}
+                />
+              </div>
+              <div className="button w-1/8 sm:p-2 p-2  ">
+                <Button icon={faHeart} color={"custom-blue"} size={"large"} />
+              </div>
             </div>
-            <div className="button w-1/8 sm:p-2 p-2  ">
-              <Button icon={faHeart} color={"custom-blue"} size={"large"} />
+
+            <div className="flex   pt-4 flex-col sm:flex-row justify-between sm:justify-start text-start   items-center   w-full sm:block  ">
+              <div className=" flex justify-start   ">
+                <Counter />
+              </div>
             </div>
           </div>
-
-          <div className="flex   pt-4 flex-col sm:flex-row justify-between sm:justify-start text-start   items-center   w-full sm:block  ">
-            <div className=" flex justify-start   ">
-              <Counter />
-            </div></div>
-          </div>
-
-       
         </div>
       </div>
     </>
