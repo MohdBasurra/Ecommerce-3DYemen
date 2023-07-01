@@ -38,7 +38,7 @@ const Carousel = () => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="  h-1/2     ">
+            <div className="  h-1/2 w-full    ">
               <div className="  flex flex-col justify-center   items-center w-full h-1/4 ">
                 <Image
                   src={image}

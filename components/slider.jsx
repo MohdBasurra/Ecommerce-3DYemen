@@ -50,7 +50,7 @@ const Carousel = ({ descrption = true }) => {
   }, []);
 
   return (
-    <div className="w-screen    flex  justify-center items-center     ">
+    <div className="w-full  flex  justify-center items-center     ">
       <div className="parent sm:w-1/2 w-full flex flex-col sm:flex-row rounded border-custom-blue border-solid border-8 ">
         {1 && descrption ? (
           <div className="child1 bg-custom-blue w-full sm:w-1/3 sm:text-2xl  text-2xl justify-start items-center text-white font-bold p-2 ">

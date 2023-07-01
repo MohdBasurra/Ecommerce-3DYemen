@@ -5,7 +5,7 @@ import Link from "next/link";
 const signup = () => {
   return (
     <>
-      <div className="main bg-slate-300 w-screen h-screen flex items-center justify-center">
+      <div className="main bg-slate-300 w-full h-screen flex items-center justify-center">
         <div className="card bg-custom-blue w-3/4 h-5/6 rounded-xl flex items-center justify-center">
           <div className="Ads w-1/2 h-full rounded-l-xl hidden lg:block bg-lightBlue">
             <div className="   flex-col flex sm:justify-center sm:items-center h-full ">
@@ -137,10 +137,10 @@ const signup = () => {
                       </button>
                       <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                         Do you have an account?{" "}
-                        <Link href="/signup">
-                          <a class="font-medium text-primary-600 hover:underline dark:text-primary-500">
+                        <Link href="/signup" class="font-medium text-primary-600 hover:underline dark:text-primary-500">
+                
                             Login
-                          </a>
+                       
                         </Link>
                       </p>
                     </form>

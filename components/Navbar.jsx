@@ -103,7 +103,7 @@ function Header() {
                 </a>
               </li>
               <li class="ml-2 lg:ml-4 relative inline-block">
-                <a class="" href="">
+                <a class="" href="/cart">
                   <div class="absolute -top-1 right-0 z-10 bg-custom-blue text-xs font-bold px-1 py-0.5 rounded-sm">
                     7
                   </div>

@@ -11,7 +11,7 @@ const Cart = () => {
   return (
     <>
       <>
-        <div className="main bg-slate-300 w-screen sm:h-screen h-full flex items-center justify-center ">
+        <div className="main bg-slate-300 w-full sm:h-screen h-full flex items-center justify-center ">
           <div className="Summary  bg-custom-blue w-screen sm:w-5/6 h-3/4 rounded-2xl justify-center flex md:flex-row flex-col">
             <div
               className="shoppingCart  md:w-3/4 w-full    h-full  sm:rounded-l-xl sm:rounded-r-none rounded-t-2xl  rounded-e-none 
