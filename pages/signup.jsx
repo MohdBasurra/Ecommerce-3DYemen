@@ -1,8 +1,59 @@
 import Image from "next/image";
 import LoginVector from "@/images/signupVector.png";
 import Link from "next/link";
+import { db } from '../firebase/config';
+import { doc, setDoc, collection, addDoc } from 'firebase/firestore';
+import { useState } from "react";
+import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { auth } from '../firebase/config';
 
-const signup = () => {
+const Signup = () => {
+  const [user, setUser] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    password: '',
+    confirmPassword: ''
+  });
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    try {
+      // Create the user in Firebase Authentication
+      const { user: authUser } = await createUserWithEmailAndPassword(auth, user.email, user.password);
+
+      // Save the user information to the Firestore collection 'users'
+      const userRef = doc(db, "users", authUser.uid);
+      await setDoc(userRef, {
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        phoneNumber: user.phoneNumber,
+        password:user.password
+      });
+      
+      // Send a verification email to the user
+      await sendEmailVerification(auth.currentUser);
+
+      // Reset the form and notify the user of success
+      event.target.reset();
+      alert("User added successfully! Please check your email to verify your account.");
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Error adding user. Please try again.");
+    }
+  }
+
+  function handleChange(event) {
+    event.preventDefault()
+    const { name, value } = event.target;
+    setUser((prevUser) => ({
+      ...prevUser,
+      [name]: value
+    }));
+  }
+
   return (
     <>
       <div className="main bg-slate-300 w-full h-screen flex items-center justify-center">
@@ -28,45 +79,49 @@ const signup = () => {
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                       Create a new account
                     </h1>
-                    <form class="space-y-4 md:space-y-6">
+                    <form class="space-y-4 md:space-y-6"
+                      onSubmit={handleSubmit}>
                       <div>
-                        <label
-                          for="text"
+                      <label
+                          for="firstName"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           first name
                         </label>
                         <input
-                          type="text"
-                          name="text"
+                             onChange={handleChange}
+                             type="text"
+                             name="firstName"
                           class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="Ahmed"
                           required=""
-                        />
+                         />
                       </div>
                       <div>
-                        <label
-                          for="text"
+                      <label
+                          for="lastName"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           Last name
                         </label>
                         <input
-                          type="text"
-                          name="text"
+                         onChange={handleChange}
+                         type="text"
+                         name="lastName"
                           class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="Ali"
                           required=""
-                        />
+                         />
                       </div>
                       <div>
-                        <label
+                      <label
                           for="email"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           Your email
                         </label>
                         <input
+                          onChange={handleChange}
                           type="email"
                           name="email"
                           id="email"
@@ -76,15 +131,16 @@ const signup = () => {
                         />
                       </div>
                       <div>
-                        <label
-                          for="phone"
+                      <label
+                          for="phoneNumber"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           phone number
                         </label>
                         <input
-                          type="tel"
-                          name="phone"
+                            onChange={handleChange}
+                            type="tel"
+                            name="phoneNumber"
                           id="phone"
                           placeholder="771234567"
                           class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -93,15 +149,17 @@ const signup = () => {
                       </div>
                       <div className="flex sm:flex-row flex-col">
                         <div className="sm:pr-8">
-                          <label
-                            for="password"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                          >
+                        <label
+                          for="password"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
                             Password
                           </label>
                           <input
-                            type="password"
-                            name="password"
+                          
+                           onChange={handleChange}
+                           type="password"
+                           name="password"
                             id="password"
                             placeholder="••••••••"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -109,16 +167,17 @@ const signup = () => {
                           />
                         </div>
                         <div>
-                          <label
-                            for="password"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                          >
-                            {" "}
+                        <label
+                          for="confirmPassword"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                             
                             confirm Password
                           </label>
                           <input
-                            type="password"
-                            name="password"
+                          onChange={handleChange}
+                          type="password"
+                          name="confirmPassword"
                             id="password"
                             placeholder="••••••••"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
@@ -130,9 +189,10 @@ const signup = () => {
                         <div class="flex items-start"></div>
                       </div>
                       <button
-                        type="submit"
+                       
+                      type="submit"
                         class="w-full text-black bg-custom-blue hover:bg-blue-500 focus:ring-4   focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                      >
+                        >
                         Sign in
                       </button>
                       <p class="text-sm font-light text-gray-500 dark:text-gray-400">
@@ -155,4 +215,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;
