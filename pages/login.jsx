@@ -1,9 +1,10 @@
 import Image from "next/image";
 import LoginVector from "@/images/LoginVector.png";
 import Link from "next/link";
- import { useState } from "react";
- import { signIn } from '../firebase/auth';
- import { getAuth, signInWithEmailAndPassword } from "firebase/auth";import {auth} from '../firebase/config';
+import { useState } from "react";
+import { signIn } from "../firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/config";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -40,7 +41,7 @@ const Login = () => {
                 alt="Example Image"
                 width={400}
                 height={400}
-              /> 
+              />
               <h1 className="p-8 text-2xl font-semibold">welecome Back!</h1>
             </div>
           </div>
@@ -52,7 +53,11 @@ const Login = () => {
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                       Sign in to your account
                     </h1>
-                    <form   onSubmit={handleLogin} class="space-y-4 md:space-y-6" action="#">
+                    <form
+                      onSubmit={handleLogin}
+                      class="space-y-4 md:space-y-6"
+                      action="#"
+                    >
                       <div>
                         <label
                           for="email"
@@ -67,8 +72,8 @@ const Login = () => {
                           class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="name@company.com"
                           required=""
-
-onChange={(e) => setEmail(e.target.value)}                        />
+                          onChange={(e) => setEmail(e.target.value)}
+                        />
                       </div>
                       <div>
                         <label
@@ -85,15 +90,16 @@ onChange={(e) => setEmail(e.target.value)}                        />
                           class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           required=""
                           onChange={(e) => setPassword(e.target.value)}
-                          />
+                        />
                       </div>
                       <div class="flex items-center justify-between">
                         <div class="flex items-start"></div>
-                        <Link href="/" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">
-                           
-                            Forgot password?
-                           
-                        </Link> 
+                        <Link
+                          href="/"
+                          className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
+                        >
+                          Forgot password?
+                        </Link>
                       </div>
                       <button
                         type="submit"
@@ -103,11 +109,12 @@ onChange={(e) => setEmail(e.target.value)}                        />
                         Sign in
                       </button>
                       <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                        Don’t have an account yet? 
-                        <Link href="/signup" class="font-medium text-primary-600 hover:underline dark:text-primary-500">
-                           
-                            Sign up
-                           
+                        Don’t have an account yet?
+                        <Link
+                          href="/signup"
+                          class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                        >
+                          Sign up
                         </Link>
                       </p>
                     </form>

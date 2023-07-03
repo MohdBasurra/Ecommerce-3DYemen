@@ -1,12 +1,11 @@
-
 import CartItem from "../components/cartItem";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 const Cart = () => {
-    const [showCopon, setShowCopon] = useState(false);
+  const [showCopon, setShowCopon] = useState(false);
 
-    function handleCheckboxChange(event) {
-        setShowCopon(event.target.checked);
-      }
+  function handleCheckboxChange(event) {
+    setShowCopon(event.target.checked);
+  }
 
   return (
     <>
@@ -69,69 +68,70 @@ const Cart = () => {
                     <option value="Fatima">Taiz</option>
                     <option value="Fatima">Shabowa</option>
                     <option value="Fatima">Aden</option>
-                    
                   </select>
                   <label
                     for="text"
                     class="  mb-2 text-sm font-medium text-gray-500 dark:text-white"
                   >
-                   *Shipping time to Huthi Governent may take more than 5 Days
+                    *Shipping time to Huthi Governent may take more than 5 Days
                   </label>
                 </div>
                 <div className="pt-4 checkbox flex flex-row">
-                <input
-        type="checkbox"
-        name="terms"
-        id="terms"
-        className="form-checkbox h-5 w-5 text-custom-blue"
-         
-        onChange={handleCheckboxChange}
-      />
-      <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
-        I have a Copon
-      </label></div>
-      {showCopon && (
-        <div className="Copon">
-          <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-            discount code
-          </label>
-          <input
-            type="text"
-            name="Coupon"
-            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-custom-blue focus:border-custom-blue block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="ZA-55"
-            required
-          />
-        </div>
-        
-      )}
-                  <hr className="border-gray-900 my-6" />
-                  <div className="Items and price flex flex-row justify-between">
+                  <input
+                    type="checkbox"
+                    name="terms"
+                    id="terms"
+                    className="form-checkbox h-5 w-5 text-custom-blue"
+                    onChange={handleCheckboxChange}
+                  />
+                  <label
+                    htmlFor="terms"
+                    className="ml-2 block text-sm text-gray-900"
+                  >
+                    I have a Copon
+                  </label>
+                </div>
+                {showCopon && (
+                  <div className="Copon">
                     <label
-                      for="text"
-                      class="block mb-2 text-2xl font-bold text-gray-900 dark:text-white"
+                      htmlFor="text"
+                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                     TOTAL PRICE
+                      discount code
                     </label>
-                    <label
-                      for="text"
-                      class="block mb-2 text-2xl font-bold text-gray-900 dark:text-white"
-                    >
-                      19000$
-                    </label>
+                    <input
+                      type="text"
+                      name="Coupon"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-custom-blue focus:border-custom-blue block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="ZA-55"
+                      required
+                    />
                   </div>
-                  <button
-                        type="submit"
-                        class="w-full text-black text-xl bg-custom-blue hover:bg-lightBlue focus:ring-4   focus:ring-blue-900 font-medium rounded-lg   px-5 py-2.5 text-center"
-                      >
-                        CHECKOUT
-                      </button>
+                )}
+                <hr className="border-gray-900 my-6" />
+                <div className="Items and price flex flex-row justify-between">
+                  <label
+                    for="text"
+                    class="block mb-2 text-2xl font-bold text-gray-900 dark:text-white"
+                  >
+                    TOTAL PRICE
+                  </label>
+                  <label
+                    for="text"
+                    class="block mb-2 text-2xl font-bold text-gray-900 dark:text-white"
+                  >
+                    19000$
+                  </label>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full text-black text-xl bg-custom-blue hover:bg-lightBlue focus:ring-4   focus:ring-blue-900 font-medium rounded-lg   px-5 py-2.5 text-center"
+                >
+                  CHECKOUT
+                </button>
               </form>
             </div>
-
-           
           </div>
-          
         </div>
       </>
     </>
