@@ -5,32 +5,21 @@ import { useState } from "react";
 import { signIn } from "../firebase/auth";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";
+import { handleLogin } from "../firebase/LoginAuth";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    const auth = getAuth();
-    try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      // Successfully logged in
-      window.alert("Logged in as:", userCredential.user.email);
-    } catch (error) {
-      // Handle errors here
-      window.alert("Error logging in:", error);
-    }
+  const handleSubmit = (event) => {
+    handleLogin(event, email, password);
   };
 
   return (
     <>
       <div className="main bg-slate-300 w-full h-screen flex items-center justify-center">
-        <div className="card bg-custom-blue w-3/4 h-3/4 rounded-xl flex   justify-center">
+        <div className="card overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 bg-custom-blue w-3/4 h-3/4 rounded-xl flex   justify-center">
           <div
             className="Ads  w-1/2  h-full rounded-l-xl
              hidden lg:block bg-lightBlue "
@@ -54,7 +43,7 @@ const Login = () => {
                       Sign in to your account
                     </h1>
                     <form
-                      onSubmit={handleLogin}
+                       onSubmit={handleSubmit}
                       class="space-y-4 md:space-y-6"
                       action="#"
                     >
@@ -103,8 +92,7 @@ const Login = () => {
                       </div>
                       <button
                         type="submit"
-                        onClick={handleLogin}
-                        class="w-full text-black bg-custom-blue hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                         class="w-full text-black bg-custom-blue hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                       >
                         Sign in
                       </button>

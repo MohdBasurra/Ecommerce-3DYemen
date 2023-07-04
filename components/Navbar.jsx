@@ -5,6 +5,8 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { Imprima } from "next/font/google";
+import {handleSignout,isLoggedin} from '../firebase/LoginAuth';
 
 const navigation = [
   { name: "Home", href: "/", current: false },
@@ -179,7 +181,7 @@ function Header() {
                       </div>
                     </div>
                   </div>
-                  <div className="absolute inset-y-0 right-0 flex items-center  sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  {!isLoggedin?(<button className="bg-custom-blue w-[6rem] p-2 rounded-xl"><Link href='/login'>Login</Link></button>):(<div className="absolute inset-y-0 right-0 flex items-center  sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     {/* Profile dropdown */}
                     <Menu as="div" className="relative ml-3">
                       <div>
@@ -218,21 +220,19 @@ function Header() {
                            
                           <Menu.Item>
                             {({ active }) => (
-                              <Link
-                                href="#"
-                                className={classNames(
-                                  active ? "bg-gray-100 text-red-600" : "",
-                                  "block px-4 py-2 text-sm text-gray-700"
-                                )}
-                              >
+                              <div onClick={handleSignout} className={classNames(
+                                active ? "bg-gray-100 text-red-600" : "",
+                                "block px-4 py-2 text-sm text-gray-700"
+                              )}>
+                            
                                 Sign out
-                              </Link>
+                               </div>
                             )}
                           </Menu.Item>
                         </Menu.Items>
                       </Transition>
                     </Menu>
-                  </div>
+                  </div>)}
                 </div>
               </div>
               {/* Mobile phone */}

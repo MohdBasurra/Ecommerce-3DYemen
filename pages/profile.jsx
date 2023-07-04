@@ -39,14 +39,22 @@ const Profile = () => {
               <label htmlFor="phone" className="mb-1">Phone Number</label>
               <input type="text" className="form-input rounded-lg" placeholder="Phone number" id="phone" />
             </div>
-            <div className="col-span-1 flex flex-col">
-              <label htmlFor="address" className="mb-1">Address</label>
-              <input type="text" className="form-input rounded-lg" placeholder="address" id="address" />
-            </div>
+           
             <div className="col-span-1 flex flex-col">
               <label htmlFor="country" className="mb-1">Country</label>
-              <input type="text" className="form-input rounded-lg" placeholder="Country" id="country" />
-            </div>
+              <select
+     //   value={selectedGovernment}
+        //onChange={handleGovernmentChange}
+        className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-lightBlue focus:border-ring-lightBlue block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  focus:ring-lightBlue focus:border-custom-blue"
+        required
+      >
+        <option value="" disabled>Select a government</option>
+        <option value="Sana'a">Sanaa</option>
+        <option value="Hadhramout">Hadhramout</option>
+        <option value="Shabwa">Shabwa</option>
+        <option value="Aden">Aden</option>
+        <option value="Taiz">Taiz</option>
+      </select>            </div>
             
           </form>
           <div className="mt-5 text-right flex items-center justify-center ">
