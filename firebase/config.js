@@ -5,7 +5,7 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth"; //importing authentication service here
 import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+import { getStorage } from 'firebase/storage';
 const firebaseConfig = {
   apiKey: "AIzaSyA-ATY46IwPrN6qRkPsMTyWc_ijlFqCIJs",
   authDomain: "d-yemen.firebaseapp.com",

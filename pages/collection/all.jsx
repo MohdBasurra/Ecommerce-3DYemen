@@ -1,6 +1,12 @@
 import data from "@/components/Ender.json";
 import Filttering from "@/components/Filltering";
+import { collection } from "firebase/firestore";
+import{useCollectionData} from 'react-firebase-hooks/firestore';
+import {db}from '../../firebase/config';
 const Collection = () => {
+  const query =collection (db,'users');
+  const [docs,loading,error]=useCollectionData(query);
+  console.log(docs);
   return (
     <>
       <div className="parent flex w-full ">

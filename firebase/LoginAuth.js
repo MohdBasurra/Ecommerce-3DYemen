@@ -17,7 +17,7 @@ export const handleLogin = async (e, email, password) => {
     // Successfully logged in
     isLoggedin=true
     Router.push('/');    
-    //window.alert("Logged in as: " + userCredential.user.email);
+    window.alert("Logged in as: " + userCredential.user.email);
   } catch (error) {
     isLoggedin=false
 
