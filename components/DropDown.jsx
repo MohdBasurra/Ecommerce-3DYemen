@@ -8,12 +8,12 @@ const DropDown = ({ DropName, arr }) => {
     <>
       <div className="parent ">
         <div>
-          <div className="product border border-b-black">
+          <div className="product border border-b-black whitespace-normal break-words">
             <>
               <button
                 id="dropdownDividerButton"
                 data-dropdown-toggle="dropdownDivider"
-                className="text-black text-2xl     font-medium rounded-lg px-4 py-2.5 text-center inline-flex items-center  "
+                className="text-black sm:text-2xl text-xs whitespace-normal break-words    font-medium rounded-lg px-1 py-2.5 text-center sm:inline-flex items-center  "
                 type="button"
                 onClick={toggleDropdown}
               >

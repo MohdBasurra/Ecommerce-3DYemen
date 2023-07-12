@@ -33,11 +33,11 @@ const Filltering = () => {
   };
   return (
     <>
-      <div className="parent h-full bg-gray-100">
+      <div className="parent  ">
         <div>
-          <div className="product">
-            <DropDown DropName={"Products"} arr={products} />
-            <DropDown DropName={"price"} arr={price} />
+          <div className="product flex flex-row sm:flex-col flex-wrap   w-full    justify-between" >
+            <DropDown DropName={"Products"} arr={products} className=' '/>
+            <DropDown DropName={"price"} arr={price} className='    ' />
             <DropDown DropName={"Build Volume"} arr={BuildVol} />
             <DropDown DropName={"material Type"} arr={materialType} />
             <DropDown DropName={"material Color"} arr={Color} />

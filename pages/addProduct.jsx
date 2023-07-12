@@ -8,54 +8,56 @@ import { getStorage,
   ref,uploadBytesResumable,
   getDownloadURL
  } from 'firebase/storage';
-  const AddProduct = () => {
-    const [Data,setData]=useState({
-      name:'Ender 3 V2',
-      Year:'2020',
-      Materials:'PLA, TPU, PETG',
-      Print_size:'220 x 220 x 250 mm',
-      Diameter:'1.75 mm',
-      Layer_thickness:'100 - 400 Microns',
-      Closed_print_chamber:false,
-      Feeder_system: 'Bowden',
-      Display :'LCD color screen',
-      Connectivity:'SD card',
-      Camera:'No',
-      Weight_metric:'7.8 kg',
-      Assembly: 'Semi-assembled',
-      Compatible_materials:'PLA, ABS, PETG, TPU',
-      Accuracy: '0.1 mm',
-      Max_extruder_temperature:'260 °C',
-      Max_heated_bed_temperature:'100 °C',
-      Max_print_speed:'180 mm/s',
-      Bed_leveling:'Manual',
-      Resume_print:'Yes',
-      img: [] // initialize img as an empty array
-    });
+  
+const AddProduct = () => {
+  const [upload, setUpload] = useState(false);
+  const [Data,setData]=useState({
+    name:'Ender 3 V2',
+    Year:'2020',
+    Materials:'PLA, TPU, PETG',
+    Print_size:'220 x 220 x 250 mm',
+    Diameter:'1.75 mm',
+    Layer_thickness:'100 - 400 Microns',
+    Closed_print_chamber:false,
+    Feeder_system: 'Bowden',
+    Display :'LCD color screen',
+    Connectivity:'SD card',
+    Camera:'No',
+    Weight_metric:'7.8 kg',
+    Assembly: 'Semi-assembled',
+    Compatible_materials:'PLA, ABS, PETG, TPU',
+    Accuracy: '0.1 mm',
+    Max_extruder_temperature:'260 °C',
+    Max_heated_bed_temperature:'100 °C',
+    Max_print_speed:'180 mm/s',
+    Bed_leveling:'Manual',
+    Resume_print:'Yes',
+    img: [3] // initialize img as an empty array
+  });
 
-    async function handleSubmit(e){
-       e.preventDefault();
-      const docRef = doc(db, '/products/3D printers/FDM/Ender 3 V2');
-      await setDoc(docRef,Data);
+  async function handleSubmit(e){
+     e.preventDefault();
+    const docRef = doc(db, '/products/3D printers/FDM/Ender 3 V2');
+    await setDoc(docRef,Data);
+  }
+
+  const [files, setFiles] = useState([]); // initialize files as an empty array
+
+  function handleFileInputChange(e) {
+    const selectedFiles = e.target.files;
+    const newFiles = [...files];
+
+    for (let i = 0; i < selectedFiles.length; i++) {
+      newFiles.push(selectedFiles[i]);
     }
 
-    const [files, setFiles] = useState([]); // initialize files as an empty array
+    setFiles(newFiles);
+  }
 
-    function handleFileInputChange(e) {
-      const selectedFiles = e.target.files;
-      const newFiles = [...files];
-
-      for (let i = 0; i < selectedFiles.length; i++) {
-        newFiles.push(selectedFiles[i]);
-      }
-
-      setFiles(newFiles);
-    }
-
-    useEffect(() => {
-
+  useEffect(() => {
+    if (upload) {
       for (let i = 0; i < 3; i++) {
-        const storageRef = ref(storage, `images/products/3D printers/FDM/${Data.name }_${i}/`);
+        const storageRef = ref(storage, `images/products/3D printers/FDM/${Data.name}/${Data.name }_${i}/`);
 
         const file = files[i];
 
@@ -87,11 +89,14 @@ import { getStorage,
           }
         );
       }
-    }, [files]);
-
-    const handleChange = () => {
-
     }
+  }, [upload]);
+
+  const handleButtonClick = (e) => {
+    e.preventDefault();
+
+    setUpload(true);
+  };
 
     return (
       <>
@@ -123,10 +128,16 @@ import { getStorage,
                           onChange={handleFileInputChange}
                           multiple // allow multiple files to be selected
                         />
-
+ 
                         <button
                           onClick={handleSubmit}
                           class="w-full text-black bg-custom-blue hover:bg-blue-500 focus:ring-4   focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        >
+                          Sign in
+                        </button>
+                        <button
+                          onClick={handleButtonClick}
+                          class="w-1/2 text-black bg-custom-blue hover:bg-blue-500 focus:ring-4   focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                         >
                           Sign in
                         </button>
